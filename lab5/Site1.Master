@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="lab5.Site1" %>
+
+<!DOCTYPE html lang="fr">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+<title>Lab5</title> 
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+
+<!-- Scripts --> 
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined')
+        document.write(unescape("%3Cscript src='js/jquery-1.9.js'" +
+															"type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript" src="js/trunk.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1>Lab5</h1>
+	</header>
+
+	<nav class="slide">
+		<ul>
+			<li><a href="../Default.aspx" class="active">HOME</a></li>
+			<li><a href="../clients/lister.aspx" class="active">Lister</a></li>
+			<li><a href="../clients/detruire.aspx" class="active">Detruire</a></li>
+		</ul>
+	</nav>
+        	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul class="responsive">
+            			<li class="header-section">
+				<p class="placefiller"></p>
+			</li>
+            <li class="body-section">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+				<p class="placefiller"></p>
+			</li>
+			<li class="footer-section">
+				<p class="placefiller"></p>
+			</li>
+            </ul>
+    </div>
+    </form>
+</body>
+</html>
